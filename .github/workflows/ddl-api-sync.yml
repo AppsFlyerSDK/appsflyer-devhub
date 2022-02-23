@@ -1,0 +1,16 @@
+name: Sync DDL S2S API
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: readmeio/github-readme-sync@v2
+        with:
+          readme-oas-key: ${{ secrets.README_DDL_S2S_SECRET }} 
+          oas-file-path: './docs/apis/OneLink/ddlapi.yaml'
+          api-version: 'v0.1'
