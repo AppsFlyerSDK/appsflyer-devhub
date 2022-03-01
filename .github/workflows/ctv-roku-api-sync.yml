@@ -1,0 +1,16 @@
+name: Sync ROKU CTV API
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: readmeio/github-readme-sync@v2
+        with:
+          readme-oas-key: ${{ secrets.README_ROKU_CTV_SECRET }} 
+          oas-file-path: './docs/apis/ctv/roku_oas3.yaml'
+          api-version: 'v0.1'
