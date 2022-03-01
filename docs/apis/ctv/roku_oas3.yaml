@@ -16,7 +16,7 @@ paths:
       - Measure installs
       summary: Measure installs
       description: To properly measure CTV app installs with AppsFlyer, the following
-        API call must be made for every new install
+        API call must be made for every new install 
       parameters:
       - name: app-id
         in: path
