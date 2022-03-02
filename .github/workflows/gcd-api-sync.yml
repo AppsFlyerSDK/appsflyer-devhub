@@ -1,0 +1,14 @@
+name: Sync GCD API
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: readmeio/rdme@6.5.0
+        with:
+          rdme: openapi ./docs/apis/gcdapi/gcdapi.yaml --key=${{ secrets.README_API_KEY }} --id=616c0968dba78300342aab6d
