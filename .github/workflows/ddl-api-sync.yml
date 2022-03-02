@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: readmeio/github-readme-sync@v2
+      - uses: readmeio/rdme@6.5.0
         with:
-          readme-oas-key: ${{ secrets.README_DDL_S2S_SECRET }} 
-          oas-file-path: './docs/apis/OneLink/ddlapi.yaml'
-          api-version: 'v0.1'
+          rdme: openapi ./docs/apis/audience/audience_external_api.yaml --key=${{ secrets.README_API_KEY }} --id=5f7d78862614180733ad85d7
