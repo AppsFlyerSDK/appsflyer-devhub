@@ -1,0 +1,14 @@
+name: Sync Predict SK API
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: readmeio/rdme@6.5.0
+        with:
+          rdme: openapi ./docs/apis/Predict/predict_pull_api.yaml --key=${{ secrets.README_API_KEY }} --id=619ca39dba52150073eae7b8
