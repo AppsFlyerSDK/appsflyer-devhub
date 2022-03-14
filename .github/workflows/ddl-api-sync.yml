@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: readmeio/rdme@6.5.0
         with:
-          rdme: openapi ./docs/apis/audience/audience_external_api.yaml --key=${{ secrets.README_API_KEY }} --id=5f7d78862614180733ad85d7
+          rdme: openapi ./docs/apis/OneLink/ddlapi.yaml --key=${{ secrets.README_API_KEY }} --id=5f7d78862614180733ad85d7
